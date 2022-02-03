@@ -1,0 +1,87 @@
+// main: ../style.less
+
+.sidemenu {
+    background-color: @blue;
+}
+
+.sidemenu__inner {
+    padding: 7.5rem 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidemenu__item--title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.sidemenu__item--list--link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: @white;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+        color: @yellow;
+        text-decoration: underline;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media @tablet {
+    .sidemenu__inner {
+        padding: 4rem 0;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sidemenu__inner--item {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .sidemenu__item--list--link {
+        margin-bottom: 1rem;
+    }
+}
+
+@media @mobile {
+    .sidemenu__inner {
+        padding: 2rem 0;
+    }
+
+    .sidemenu__item--title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sidemenu__item--list--link {
+        font-size: 1.4rem;
+        margin-bottom: .6rem;
+    }
+}
+
+@media @mobile-sm {
+
+    .sidemenu__inner--item {
+        width: 100%;
+    }
+
+    .sidemenu__item--title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .sidemenu__item--list--link {
+        font-size: 1.2rem;
+        margin-bottom: .4rem;
+    }
+}

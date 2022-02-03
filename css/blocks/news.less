@@ -1,0 +1,160 @@
+// main: ../style.less
+
+.news {
+    background-color: @iceCream;
+}
+
+.news__inner {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 7.5rem 0 8.5rem 0;
+}
+
+.news__inner--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news__inner--right {
+    width: 50%;
+}
+
+.news__inner--header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 3rem;
+
+    & .intro__content--link {
+        font-size: 2.1rem;
+        color: @black;
+    }
+}
+
+.news__header--title {
+    font-size: 3rem;
+    color: @black;
+    font-weight: 500;
+}
+
+.news__right--content--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 3rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.news__right--date {
+    margin-left: 3rem;
+}
+
+.news__right--item--date {
+    font-size: 1.6rem;
+    color: @red;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.news__right--item--title {
+    font-size: 2.1rem;
+    color: @black;
+    font-weight: 500;
+
+    text-decoration: none;
+    line-height: 1.1;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+@media @tablet {
+    .news__inner {
+        flex-direction: column;
+        padding: 5.5rem 0 6.5rem 0;
+    }
+
+    .news__inner--left {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .news__inner--right {
+        width: 100%;
+    }
+
+    .news__right--content--item {
+        justify-content: flex-start;
+    }
+}
+
+@media @mobile {
+    .news__header--title {
+        font-size: 2.5rem;
+    }
+
+    .news__inner--header {
+
+        & .intro__content--link {
+            font-size: 1.8rem;
+            color: @black;
+        }
+    }
+
+    .news__right--item--title {
+        font-size: 1.8rem;
+    }
+}
+
+@media @mobile-sm {
+    .news__inner {
+        padding: 3rem 0;
+    }
+
+    .news__inner--left {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: .5rem;
+        }
+    }
+
+    .news__inner--header {
+        margin-bottom: 1rem;
+
+        & .intro__content--link {
+            font-size: 1.5rem;
+        }
+    }
+
+    .news__right--date {
+        margin-left: 1rem;
+    }
+
+    .news__right--item--date {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .news__right--item--title {
+        font-size: 1.5rem;
+        line-height: .5;
+    }
+}
